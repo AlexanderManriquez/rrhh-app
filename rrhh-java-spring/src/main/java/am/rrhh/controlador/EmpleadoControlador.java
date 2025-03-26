@@ -15,7 +15,7 @@ import am.rrhh.servicio.IEmpleadoServicio;
 
 @RestController
 @RequestMapping("rrhh-app")
-@CrossOrigin(value = "http://localhost:3000")
+@CrossOrigin(value = "http://localhost:5173")
 public class EmpleadoControlador {
     private static final Logger logger = 
             LoggerFactory.getLogger(EmpleadoControlador.class);
