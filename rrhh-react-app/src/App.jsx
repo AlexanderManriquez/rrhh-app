@@ -1,17 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import ListadoEmpleados from './components/ListadoEmpleados';
 import Navbar from './components/Navbar';
+import AgregarEmpleado from './components/AgregarEmpleado';
+
 
 function App() {
 
   return (
     <>
       <div>
-        {/* <header className="container">
-          <h1 className='text-center'>Sistema de Gestión de Recursos Humanos</h1>
-        </header> */}
+        <BrowserRouter>
         <Navbar />
-        <ListadoEmpleados />
+        <Routes>
+          <Route exact path="/" element={<ListadoEmpleados />} />
+          <Route exact path="/agregar-empleado" element={<AgregarEmpleado />} />
+        </Routes>
+        </BrowserRouter>
       </div>
     </>
   )
