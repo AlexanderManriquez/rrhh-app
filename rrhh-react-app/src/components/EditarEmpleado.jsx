@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
-export default function AgregarEmpleado() {
+export default function EditarEmpleado() {
   let navegacion = useNavigate();
+
+  const urlBase = "http://localhost:8080/rrhh-app/empleados";
+
+  const {id} = useParams();
+
+  useEffect(() => {
+    cargarEmpleado();
+  }, [])
+
+  const cargarEmpleado = async () => {
+    const resultado = await axios.get(`${urlBase}/${id}`);
+    setEmpleado(resultado.data);	
+    
+  }
 
   const [empleado, setEmpleado] = useState({
     nombre: "",
@@ -19,7 +33,6 @@ export default function AgregarEmpleado() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    const urlBase = "http://localhost:8080/rrhh-app/empleados";
     await axios.post(urlBase, empleado);
     navegacion("/");
   }
@@ -27,7 +40,7 @@ export default function AgregarEmpleado() {
   return (
     <div className="container">
       <div>
-        <h3 className="text-center m-5">Agregar Empleado</h3>
+        <h3 className="text-center m-5">Editar Empleado</h3>
       </div>
       <form
         className="w-50 mx-auto mt-5 text-center"
@@ -77,7 +90,7 @@ export default function AgregarEmpleado() {
         </div>
         <div className="container">
           <button type="submit" className="btn btn-warning w-25 mt-3">
-            Enviar datos
+            Guardar datos
           </button>
           <a href="/" className="btn btn-danger w-25 mt-3 ms-3">
             Volver al Inicio

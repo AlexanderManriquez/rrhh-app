@@ -1,5 +1,6 @@
 import React , { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default function ListadoEmpleados() {
 
@@ -25,6 +26,7 @@ export default function ListadoEmpleados() {
               <th scope="col">Nombre</th>
               <th scope="col">Departamento</th>
               <th scope="col">Sueldo</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -35,6 +37,10 @@ export default function ListadoEmpleados() {
                   <td>{empleado.nombre}</td>
                   <td>{empleado.departamento}</td>
                   <td>${empleado.salario}</td>
+                  <td className="text-center">
+                    <Link to={`/editar-empleado/${empleado.idEmpleado}`} className="btn btn-warning btn-sm mx-1">Editar</Link>
+                    
+                  </td>
                 </tr>
               ))
             }
