@@ -51,15 +51,20 @@ export default function AgregarEmpleado() {
           <label htmlFor="departamento" className="form-label">
             Departamento
           </label>
-          <input
-            type="text"
-            className="form-control"
+          <select
+            className="form-select"
             id="departamento"
             name="departamento"
             required={true}
             value={departamento}
             onChange={(e) => onInputChange(e)}
-          />
+          >
+            <option value="Marketing">Marketing</option>
+            <option value="Recursos Humanos">Recursos Humanos</option>
+            <option value="Finanzas">Finanzas</option>
+            <option value="Informática">Informática</option>
+            <option value="Logística">Logística</option> 
+          </select>
         </div>
         <div className="mb-3">
           <label htmlFor="salario" className="form-label">
