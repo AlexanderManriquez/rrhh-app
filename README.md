@@ -42,45 +42,48 @@ cd rrhh-full-stack
 
 ### Backend
 
-Navega a la carpeta del backend:
+1. Navega a la carpeta del backend:
 
 ```bash
 cd rrhh-java-spring
 ```
 
-Compila y ejecuta el backend:
+2. Compila y ejecuta el backend:
 
 ```bash
 mvn spring-boot:run
 ```
 
-El backend estará disponible en http://localhost:8080.
+3. El backend estará disponible en http://localhost:8080.
 
 ### Frontend
 
-Navega a la carpeta del frontend:
+1. Navega a la carpeta del frontend:
 
 ```bash
 cd rrhh-react-app
 ```
 
-Instala las dependencias:
+2. Instala las dependencias:
 
 ```bash
 npm install
 ```
 
-Inicia el servidor de desarrollo:
+3. Inicia el servidor de desarrollo:
 
-El frontend estará disponible en http://localhost:5173.
+```bash
+npm run dev
+```
 
-Guarda este contenido en un archivo llamado [README.md](http://_vscodecontentref_/2) en la raíz de tu proyecto. Esto ayudará a otros desarrolladores a entender y usar tu proyecto fácilmente.
+4. El frontend estará disponible en http://localhost:5173.
+
 
 ## Uso
 
-Abre el navegador y accede a http://localhost:5173.
-Utiliza la interfaz para agregar, editar, listar y eliminar empleados.
-Los datos se sincronizan con el backend mediante la API REST.
+1. Abre el navegador y accede a http://localhost:5173.
+2. Utiliza la interfaz para agregar, editar, listar y eliminar empleados.
+3. Los datos se sincronizan con el backend mediante la API REST.
 
 ## Estructura del proyecto
 
@@ -95,11 +98,11 @@ rrhh-full-stack/
 
 ¡Las contribuciones son bienvenidas! Si deseas contribuir, por favor sigue estos pasos:
 
-Haz un fork del repositorio.
-Crea una rama para tu funcionalidad (git checkout -b feature/nueva-funcionalidad).
-Realiza tus cambios y haz un commit (git commit -m "Agrega nueva funcionalidad").
-Haz un push a tu rama (git push origin feature/nueva-funcionalidad).
-Abre un Pull Request.
+1. Haz un fork del repositorio.
+2. Crea una rama para tu funcionalidad (git checkout -b feature/nueva-funcionalidad).
+3. Realiza tus cambios y haz un commit (git commit -m "Agrega nueva funcionalidad").
+4. Haz un push a tu rama (git push origin feature/nueva-funcionalidad).
+5. Abre un Pull Request.
 
 ## Licencia
 
@@ -108,6 +111,7 @@ Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más 
 ¡Gracias por usar esta aplicación! Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue en el repositorio.
 
 ### Instrucciones adicionales:
+
 1. Reemplaza `<tu-usuario>` en el enlace del repositorio con tu nombre de usuario de GitHub.
 2. Si utilizas una base de datos diferente a H2, actualiza la sección de requisitos y configuración del backend.
 
